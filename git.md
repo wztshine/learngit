@@ -4,7 +4,7 @@
 
 ### 创建本地仓库
 
-使用git init后，会创建一个.git隐藏文件夹，这个文件夹是我们的版本库
+使用 `git init` 后，会创建一个 `.git` 隐藏文件夹，这个文件夹是我们的版本库
 
 ~~~
 mkdir newFolder
@@ -439,23 +439,23 @@ git push origin :refs/tags/v0.9
    2.  ```
       git config --global user.name “Your Name”
       git config --global user.email "email@example.com"
-       ```
+      ```
 
 4. 创建SSH key，直接三次回车
 
    1.  ```
       ssh-keygen -t rsa -C "your_email@youremail.com"
-       ```
+      ```
 
 
 5. 进入.ssh文件夹，里面有两个key, 其中 `id_rsa.pub` 是公钥，打开它，复制里面的内容，在github的设置里面，找到 SSH and GPG keys，添加就ok了
 
    1.  ```
-      
+         
       $ cd ~/.ssh
       $ ls
       id_rsa  id_rsa.pub  known_hosts
-       ```
+      ```
 
 6. 测试是否连上
 
@@ -464,4 +464,4 @@ git push origin :refs/tags/v0.9
       Warning: Permanently added the RSA host key for IP address '13.250.177.223' to the list of known hosts.
       Hi wztshine! You've successfully authenticated, but GitHub does not provide shell access.
       
-       ```
+      ```
