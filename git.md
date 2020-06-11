@@ -21,7 +21,7 @@ pwd
 ### 添加，提交
 
 ~~~
-git add xx.txt
+git add <file/folder>
 git commit -m "add a new file"
 ~~~
 
@@ -465,3 +465,16 @@ git push origin :refs/tags/v0.9
       Hi wztshine! You've successfully authenticated, but GitHub does not provide shell access.
       
       ```
+
+
+
+
+
+## others
+
+重命名
+
+~~~
+git mv name1 name2
+~~~
+
