@@ -1,7 +1,0 @@
-1. 安装依赖库
-2. 安装MySQL，启动服务，用户名、密码、数据库名在 config/settings 里面
-3. 第一次运行请运行sql_server.py，调用createTable方法创建一个表
-    sql = Sql()
-    sql.createTable()
-    sql.close()
-4. python3.7 ; MySQL 8.0.18-winx64
