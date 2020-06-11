@@ -472,9 +472,48 @@ git push origin :refs/tags/v0.9
 
 ## others
 
-重命名
+### 重命名文件/文件夹
 
 ~~~
 git mv name1 name2
 ~~~
+
+### 自定义别名
+
+给git命令起个别名，如 ```git status``` = ` git st `  ;  `git reset HEAD` = `git unstage`
+
+~~~
+git config --global alias.st status
+git config --global alias.unstage 'reset HEAD'
+~~~
+
+配置Git的时候，加上`--global`是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。
+
+每个仓库的Git配置文件都放在`.git/config`文件中,别名就在`[alias]`后面，要删除别名，直接把对应的行删掉即可。而当前用户的Git配置文件放在用户主目录下的一个隐藏文件`.gitconfig`中
+
+~~~xml
+[user]
+	name = “wztshine
+	email = xxxxxxxxx
+[core]
+	autocrlf = true
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+[alias]
+	co = checkout
+	cm = commit
+~~~
+
+
+
+
+
+
+
+
+
+
 
