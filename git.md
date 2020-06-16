@@ -20,12 +20,14 @@ pwd
 
 ### 添加，提交
 
+添加单个文件：
+
 ~~~
 git add <file/folder>
 git commit -m "add a new file"
 ~~~
 
-添加所有文件
+添加所有文件：
 
 `git add .` 添加所有未跟踪、修改和删除文件，并且会根据 `.gitignore` 过滤 ;  `git add *` 不会根据 `.gitignore` 过滤(过滤文件不会直接添加进入，但是会有提醒)
 
@@ -33,8 +35,6 @@ git commit -m "add a new file"
 git add .
 git add *
 ~~~
-
-
 
 添加多个文件：
 
@@ -128,7 +128,7 @@ git checkout -- test.txt
 git checkout -b dev
 ~~~
 
-第二种(新版)
+第二种(个人试了没用，可能和git版本有关)
 
 ~~~
 git switch -c dev
@@ -140,10 +140,11 @@ git switch -c dev
 git branch dev      # 创建分支
 git checkout dev    # 切换分支
 
+
 git switch dev   # 另一种切换分支的方法
 ~~~
 
-### 查看当前分支
+### 查看分支
 
 ~~~
 git branch
@@ -222,9 +223,7 @@ git stash drop
 git stash pop
 ~~~
 
-恢复特定的stash
-
-需要先用`git stash list` 查看
+恢复特定的stash，需要先用`git stash list` 查看，然后 apply 恢复
 
 ~~~
 git stash apply stash@{0}
@@ -256,7 +255,7 @@ After doing this, you may fix the identity used for this commit with:
 
 ~~~
 
-然后切换到 dev 分支，使用命令让我们复制一个特定的提交到当前分支：
+然后切换到 dev 分支，使用 `cherry-pick` 命令让我们复制一个特定的提交到当前分支：
 
 ~~~
 git cherry-pick <commit>
@@ -443,7 +442,7 @@ git push origin :refs/tags/v0.9
 
 2. 安装git到本机
 
-3. 配置用户名和邮箱：
+3. git命令窗口中配置用户名和邮箱：
 
    1. `–global` 参数，表示你这台机器上所有的Git仓库都会使用这个配置
 
@@ -462,19 +461,17 @@ git push origin :refs/tags/v0.9
 5. 进入.ssh文件夹，里面有两个key, 其中 `id_rsa.pub` 是公钥，打开它，复制里面的内容，在github的设置里面，找到 SSH and GPG keys，添加就ok了
 
    1.  ```
-         
-      $ cd ~/.ssh
+       $ cd ~/.ssh
       $ ls
       id_rsa  id_rsa.pub  known_hosts
       ```
-
+   
 6. 测试是否连上
 
    1.  ```
       $ ssh -T git@github.com
       Warning: Permanently added the RSA host key for IP address '13.250.177.223' to the list of known hosts.
       Hi wztshine! You've successfully authenticated, but GitHub does not provide shell access.
-      
       ```
 
 
