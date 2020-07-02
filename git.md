@@ -147,6 +147,8 @@ git switch dev   # 另一种切换分支的方法
 
 ~~~
 git branch
+
+git branch -a
 ~~~
 
 ### 合并分支：
