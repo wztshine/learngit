@@ -587,7 +587,10 @@ $ git check-ignore -v App.class
 Git会告诉我们，`.gitignore`的第3行规则忽略了该文件，于是我们就可以知道应该修订哪个规则。
 
 
+## `git fetch` 和 `git pull` 区别
 
+git fetch 后，本地库并没有变化，git fetch只会将本地库所关联的远程库的commit id更新至最新。
+git pull 后，本地库更新至最新，git pull会将本地库更新至远程库的最新状态（最后一次commit id），而本地库所关联的远程库并没有变化。
 
 
 
